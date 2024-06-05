@@ -19,7 +19,7 @@ Then we fintuned the painting moodule using very few real-world painting progres
 
 ![lora-1](https://p.ipic.vip/vpuzau.png)
 
-Furthermore, by combining image reference net, we are able to reconstruct existing paintings or fish unfinished painting progresses.
+Furthermore, by combining image reference net, we are able to reconstruct existing paintings or finish unfinished painting progresses.
 
 
 
