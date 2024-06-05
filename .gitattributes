@@ -1,0 +1,5 @@
+models/Motion_with_LoRA/speedpainting.ckpt filter=lfs diff=lfs merge=lfs -text
+models/Motion_with_LoRA/character.ckpt filter=lfs diff=lfs merge=lfs -text
+models/Motion_with_LoRA/adapter_config.json filter=lfs diff=lfs merge=lfs -text
+models/ReferenceNet/character.ckpt filter=lfs diff=lfs merge=lfs -text
+models/ReferenceNet/speedpainting.ckpt filter=lfs diff=lfs merge=lfs -text

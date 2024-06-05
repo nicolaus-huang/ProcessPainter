@@ -24,6 +24,7 @@ models/StableDiffusion/*
 !models/DreamBooth_LoRA/*.txt
 !models/MotionLoRA/
 !models/MotionLoRA/*.txt
+!models/Motion_with_LoRA/
 test.ipynb
 data/
 StableDiffusion.zip
