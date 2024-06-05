@@ -1,0 +1,89 @@
+# animation-1
+- domain_lora_scale: 1.0
+  lora_model_path: ""
+  dreambooth_path:   ""
+  # motion_module_lora_configs:
+  # - path: "outputs/lora_4-2024-05-12T10-59-14/checkpoints/pytorch_lora_weights.safetensors"
+  #   alpha: 0.6
+  adapter_lora_path: "models/DreamBooth_LoRA/v3_sd15_adapter.ckpt"
+  adapter_lora_scale: 1.0
+  ipa_path: ""
+  lora_alpha: 0.6
+
+  inference_config: "configs/inference/inference.yaml"
+  motion_module:    "models/Motion_with_LoRA/character.ckpt"
+
+  # controlnet_config: "configs/inference/sparsectrl/latent_condition.yaml"
+  # controlnet_path:   "models/SparseCtrl/v3_sd15_sparsectrl_rgb.ckpt"
+
+  # seed: 42
+  steps: 50
+  guidance_scale: 5
+
+  # controlnet_image_indexes: [7]
+  controlnet_images:
+    - "data/validation_frames/circle"
+    - "data/validation_frames/girl"
+    - "data/validation_frames/man"
+    - "data/validation_frames/mother"
+    - "data/validation_frames/moutain"
+    - "data/validation_frames/pray"
+  controlnet_conditioning_scale: 1
+  
+  prompt:
+    - "Tall man with a scar across his cheek."
+    - "Elderly woman with a purple hat and glasses."
+    - "Young boy with a baseball cap and freckles."
+    - "Teen girl with long, curly red hair."
+    - "Middle-aged man with a thick mustache and sunglasses."
+    - "Young woman with green eyes and a nose ring."
+    - "Little girl with pigtails and a blue dress."
+    - "Athletic man with a tattoo on his arm."
+    - "Elderly man with a white beard and a cane."
+    - "Young boy with spiky blonde hair and a skateboard."
+    - "Teen boy with a hoodie and headphones."
+    - "Woman with an elaborate headdress and colorful makeup."
+    - "Middle-aged woman with short, silver hair and a scarf."
+    - "Young girl with a butterfly clip in her hair."
+    - "Tall woman with an elegant black dress and pearl necklace."
+    - "Young man with a beanie and a camera."
+    - "Elderly woman with a walker and a floral dress."
+    - "Little boy with a superhero costume and a mask."
+    - "Teen girl with a denim jacket and a choker necklace."
+    - "Man with a bald head and a leather jacket."
+    - "Woman with a traditional kimono and an umbrella."
+    - "Young girl with a stuffed animal and a smile."
+    - "Athletic woman with a ponytail and a sports jersey."
+    - "Middle-aged man with glasses and a bow tie."
+    - "Teen boy with a skateboard and a backwards cap."
+    - "Woman with dreadlocks and a colorful headband."
+    - "Elderly man with a pipe and a tweed jacket."
+    - "Young woman with a hijab and a friendly smile."
+    - "Boy with a pirate costume and a wooden sword."
+    - "Girl with a princess dress and a tiara."
+    - "Man with a chef's hat and a white apron."
+    - "Woman with large hoop earrings and bright lipstick."
+    - "Elderly woman with knitting needles and yarn."
+    - "Teen girl with a gothic outfit and dark eyeliner."
+    - "Young boy with a soccer uniform and cleats."
+    - "Woman with a sari and a bindi."
+    - "Little girl with fairy wings and a magic wand."
+    - "Man with a military uniform and medals."
+    - "Teen boy with glasses and a science book."
+    - "Woman with a flower crown and a sundress."
+    - "Young man with a tuxedo and a bow tie."
+    - "Elderly woman with a garden hat and gloves."
+    - "Girl with a tutu and ballet shoes."
+    - "Boy with a magician's hat and a deck of cards."
+    - "Woman with a winter coat and a fur collar."
+    - "Man with a painter's smock and a palette."
+    - "Girl with braces and a school uniform."
+    - "Young woman with a beach hat and sunglasses."
+    - "Boy with a cowboy hat and a toy horse."
+    - "Woman with a nurse's uniform and a stethoscope."
+
+  n_prompt:
+    - "worst quality, low quality, letterboxed"
+
+  ddim: false
+  sample_size: 512

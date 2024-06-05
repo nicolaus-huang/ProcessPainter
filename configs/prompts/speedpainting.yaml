@@ -1,0 +1,96 @@
+# animation-1
+- domain_lora_scale: 1.0
+  lora_model_path: ""
+  dreambooth_path:   "models/DreamBooth_LoRA/revAnimated_v2Rebirth.safetensors"
+  # motion_module_lora_configs:
+  # - path: "outputs/lora_4-2024-05-12T10-59-14/checkpoints/pytorch_lora_weights.safetensors"
+  #   alpha: 0.6
+  adapter_lora_path: ""
+  adapter_lora_scale: 1.0
+  ipa_path: ""
+  lora_alpha: 0.6
+
+  inference_config: "configs/inference/inference.yaml"
+  motion_module:    "models/Motion_with_LoRA/speedpainting.ckpt"
+  # controlnet_config: "configs/inference/sparsectrl/latent_condition.yaml"
+  # controlnet_path:   "models/SparseCtrl/v3_sd15_sparsectrl_rgb.ckpt"
+
+  # seed: 2
+  steps: 50
+  guidance_scale: 5
+
+  # controlnet_image_indexes: [7]
+  controlnet_images:
+    - "sks, data/validation_frames/circle"
+    - "sks, data/validation_frames/girl"
+    - "sks, data/validation_frames/man"
+    - "sks, data/validation_frames/mother"
+    - "sks, data/validation_frames/moutain"
+    - "sks, data/validation_frames/pray"
+  controlnet_conditioning_scale: 1
+  
+  prompt:
+    # - A boy and a girl sitting by a campfire, their eyes meeting in the flickering light.
+    # - A boy and a girl watching the clouds, lying on the lawn and gazing at each other.
+    # - A boy and a girl playing catch, sharing a look after every throw.
+    # - A boy and a girl lying on the lawn, gazing up at the starry sky.
+    # - A boy and a girl sitting on the grass, looking up at the stars.
+    # - A boy and a girl lying side by side on the lawn, admiring the constellations.
+    # - A boy and a girl holding hands on the grass, staring at the night sky.
+    # - A boy and a girl lying on a blanket on the lawn, marveling at the stars.
+    # - A boy and a girl with their backs on the grass, pointing at the stars.
+    # - A boy and a girl lying close together on the lawn, watching the twinkling stars.
+    # - A boy and a girl sitting under a tree, gazing up at the star-filled sky.
+    # - A boy and a girl lying head-to-head on the grass, immersed in the starry view.
+    # - A boy and a girl sitting on the lawn, whispering under the stars.
+    # - A boy and a girl lying on the grass, lost in the vastness of the night sky.
+    # - A boy and a girl wrapped in a blanket on the lawn, watching shooting stars.
+    # - A boy and a girl lying on the grass, finding constellations in the sky.
+    # - A boy and a girl sitting on the lawn, sharing dreams under the stars.
+    # - A boy and a girl on the grass, mesmerized by the celestial display above.
+    # - A boy and a girl lying back on the lawn, counting stars together.
+    # - A boy and a girl on the grass, making wishes upon the stars.
+    # - A boy and a girl lying on the lawn, silently enjoying the night sky.
+    # - A boy and a girl holding hands on the grass, captivated by the stars.
+    # - A boy and a girl lying on the grass, dreaming under the starry sky.
+    - "sks, A bridge spans a river with a city skyline in the background"
+    - "sks, A wooden house in front of a field of flowers with green mountains in the distance"
+    - "sks, A sunrise in a valley with sunlight shining through a rock arch"
+    - "sks, An ancient stone archway in a ruin with a deer standing in the foreground."
+    - "sks, A red brick house with a black roof, and a cat sitting on the porch."
+    - "sks, A small white house with blue shutters, and a dog playing in the front yard."
+    - "sks, A modern house with large glass windows, and birds nesting on the roof."
+    - "sks, A cozy cottage with a thatched roof, and a rabbit hopping nearby."
+    - "sks, A tall, narrow house painted yellow, with a squirrel climbing a tree next to it."
+    - "sks, A bungalow with a green lawn, and ducks swimming in a small pond in front."
+    - "sks, A two-story house with a large balcony, and a parrot perched on the railing."
+    - "sks, A wooden cabin in the woods, with deer grazing nearby."
+    - "sks, A houseboat anchored by the shore, with fish swimming around it."
+    - "sks, A Victorian-style house with ornate details, and a peacock strutting in the garden."
+    - "sks, A beach house on stilts, with seagulls flying overhead."
+    - "sks, A farmhouse with a barn, and chickens pecking in the yard."
+    - "sks, A mansion with tall gates, and horses grazing in the pasture."
+    - "sks, A minimalist house with a flat roof, and a turtle slowly crossing the driveway."
+    - "sks, A stone house with ivy climbing the walls, and a fox sneaking around."
+    - "sks, A treehouse high up in a large oak tree, with squirrels scurrying about."
+    - "sks, A suburban house with a neat lawn, and a hedgehog exploring the flowerbeds."
+    - "sks, A log cabin near a lake, with a bear fishing in the water."
+    - "sks, A quaint house with a picket fence, and a butterfly garden attracting bees."
+    - "sks, A townhouse with a small front yard, and a raccoon rummaging through the trash."
+    - "sks, A desert house with a cactus garden, and a lizard basking in the sun."
+    - "sks, A Mediterranean-style villa with a courtyard, and a goat grazing nearby."
+    - "sks, A colonial house with large columns, and a cow lying in the shade."
+    - "sks, A glass house with a beautiful view, and a family of ducks waddling by."
+    - "sks, A mountain chalet with a snowy roof, and a lynx prowling around."
+    - "sks, A bamboo house in a tropical setting, with monkeys swinging from the trees."
+    - "sks, A tiny house on wheels, with a sheep grazing beside it."
+    - "sks, A modern apartment building, with pigeons perched on the ledge."
+    - "sks, A retro house with a funky design, and a chameleon blending into the background."
+    - "sks, A house with solar panels on the roof, and a rabbit hole in the garden."
+    
+
+  n_prompt:
+    - "sks, worst quality, low quality, letterboxed, watermarked"
+
+  ddim: false
+  sample_size: 512
