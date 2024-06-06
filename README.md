@@ -26,7 +26,7 @@ Furthermore, by combining image reference net, we are able to reconstruct existi
 
 ## Inferencing
 
-Download the pre-trained models from [Google Drive]() and then unzip them into `models` folder.
+Download the pre-trained models from [Google Drive](https://drive.google.com/file/d/1Kgr2uieeY5GJr0TtQJkHt7sQw1PMEstj/view?usp=share_link) and then unzip them into `models` folder.
 
 ##### Painting Characters
 
