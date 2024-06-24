@@ -1,4 +1,4 @@
-# ProgressPainter
+# ProcessPainter
 
 Painting process generating using diffusion models
 
