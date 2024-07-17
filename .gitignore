@@ -15,6 +15,7 @@ scripts/*
 *.ckpt
 
 models/*
+models_backup/
 !models/StableDiffusion/
 models/StableDiffusion/*
 !models/StableDiffusion/*.txt

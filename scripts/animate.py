@@ -207,9 +207,9 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pretrained-model-path", type=str, default="/tiamat-vePFS/share_data/songyiren/projects/ELLA/stable-diffusion-v1-5",)
+    parser.add_argument("--pretrained-model-path", type=str, default="models/stable-diffusion-v1-5",)
     parser.add_argument("--inference-config",      type=str, default="configs/inference/inference-v1.yaml")    
-    parser.add_argument("--config",                type=str, default="configs/prompts/l2p-cn-final.yaml", required=False)
+    parser.add_argument("--config",                type=str, default="configs/prompts/speedpainting-cn-final.yaml", required=True)
     
     parser.add_argument("--L", type=int, default=8 )
     parser.add_argument("--W", type=int, default=512)

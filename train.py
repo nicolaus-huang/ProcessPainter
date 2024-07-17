@@ -677,7 +677,7 @@ def main(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config",   type=str, default="/tiamat-vePFS/share_data/songyiren/nicolaus/siggraph24/configs/training/lora_Characterfulsketch.yaml", required=False)
+    parser.add_argument("--config",   type=str, default="configs/training/lora_Characterfulsketch.yaml", required=False)
     parser.add_argument("--wandb",    default=False, action="store_true")
     args = parser.parse_args()
 

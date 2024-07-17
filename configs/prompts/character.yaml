@@ -2,9 +2,6 @@
 - domain_lora_scale: 1.0
   lora_model_path: ""
   dreambooth_path:   ""
-  # motion_module_lora_configs:
-  # - path: "outputs/lora_4-2024-05-12T10-59-14/checkpoints/pytorch_lora_weights.safetensors"
-  #   alpha: 0.6
   adapter_lora_path: "models/DreamBooth_LoRA/v3_sd15_adapter.ckpt"
   adapter_lora_scale: 1.0
   ipa_path: ""
@@ -12,9 +9,6 @@
 
   inference_config: "configs/inference/inference.yaml"
   motion_module:    "models/Motion_with_LoRA/character.ckpt"
-
-  # controlnet_config: "configs/inference/sparsectrl/latent_condition.yaml"
-  # controlnet_path:   "models/SparseCtrl/v3_sd15_sparsectrl_rgb.ckpt"
 
   # seed: 42
   steps: 50

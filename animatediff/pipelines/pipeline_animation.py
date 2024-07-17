@@ -133,8 +133,8 @@ class AnimationPipeline(DiffusionPipeline, LoraLoaderMixin):
         )
         self.vae_scale_factor = 2 ** (len(self.vae.config.block_out_channels) - 1)
         if ddim:
-            inverse_scheduler = DDIMInverseScheduler.from_pretrained("/tiamat-vePFS/share_data/songyiren/projects/ELLA/stable-diffusion-v1-5", subfolder='scheduler')
-            self.ddim_pipe = StableDiffusionPipeline.from_pretrained("/tiamat-vePFS/share_data/songyiren/projects/ELLA/stable-diffusion-v1-5",
+            inverse_scheduler = DDIMInverseScheduler.from_pretrained("models/stable-diffusion-v1-5", subfolder='scheduler')
+            self.ddim_pipe = StableDiffusionPipeline.from_pretrained("models/stable-diffusion-v1-5",
                                                         scheduler=inverse_scheduler,
                                                         safety_checker=None,
                                                         torch_dtype=torch.float16)

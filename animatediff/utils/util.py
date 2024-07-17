@@ -169,7 +169,7 @@ def load_weights(
     start_index = 0
     if len(unexpected) > 0:
         start_index = 1
-        lora_config = LoraConfig.from_pretrained("/tiamat-vePFS/share_data/songyiren/nicolaus/siggraph24/models/Motion_with_LoRA/")
+        lora_config = LoraConfig.from_pretrained("models/Motion_with_LoRA")
         animation_pipeline.unet.add_adapter(lora_config)
         unet_state_dict = {}
         if motion_module_path != "":
@@ -197,7 +197,7 @@ def load_weights(
         animation_pipeline.set_adapters([item['path'].split("/")[-1].split(".")[0] for item in list(motion_module_lora_configs)], adapter_weights=[1 for item in list(motion_module_lora_configs)])
         reset_pipeline_lora_alpha(animation_pipeline,
                         path.split("/")[-1].split(".")[0],
-                        "/tiamat-vePFS/share_data/songyiren/nicolaus/siggraph24/models/MotionLoRA/")
+                        "models/Motion_with_LoRA")
         # except:
         #     motion_lora_state_dict = torch.load(path, map_location="cpu")
         #     assert path.endswith(".safetensors")

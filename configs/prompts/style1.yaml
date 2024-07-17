@@ -8,7 +8,7 @@
   lora_alpha: 0.6
 
   inference_config: "configs/inference/inference.yaml"
-  motion_module:    "models/Motion_with_LoRA/speedpainting.ckpt"
+  motion_module:    "models/Motion_with_LoRA/style1.ckpt"
 
   # seed: 2
   steps: 50

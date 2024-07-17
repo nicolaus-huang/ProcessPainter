@@ -8,12 +8,13 @@
   lora_alpha: 0.6
 
   inference_config: "configs/inference/inference.yaml"
-  motion_module:    "models/Motion_with_LoRA/speedpainting.ckpt"
+  motion_module:    "models/Motion_with_LoRA/style4.ckpt"
 
   # seed: 2
   steps: 50
   guidance_scale: 5
 
+  # controlnet_image_indexes: [7]
   controlnet_images:
     - "data/validation_frames/circle"
     - "data/validation_frames/girl"
