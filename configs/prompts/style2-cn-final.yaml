@@ -5,7 +5,7 @@
   ipa_path: ""
 
   inference_config: "configs/inference/inference.yaml"
-  motion_module:    "models/Motion_with_LoRA/style2.ckpt"
+  motion_module:    "models/Motion_with_LoRA/style2-cn.ckpt"
 
   controlnet_config: "configs/inference/sparsectrl/latent_condition_32.yaml"
   controlnet_path:   "models/ReferenceNet/style2.ckpt"
