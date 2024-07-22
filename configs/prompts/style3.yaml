@@ -1,7 +1,7 @@
 # animation-1
 - domain_lora_scale: 1.0
   lora_model_path: ""
-  dreambooth_path:   "models/DreamBooth_LoRA/revAnimated_v2Rebirth.safetensors"
+  dreambooth_path:   ""
   adapter_lora_path: ""
   adapter_lora_scale: 1.0
   ipa_path: ""

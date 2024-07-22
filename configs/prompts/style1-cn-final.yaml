@@ -1,7 +1,7 @@
 # animation-1
 - domain_lora_scale: 1.0
   adapter_lora_path: "models/DreamBooth_LoRA/v3_sd15_adapter.ckpt"
-  dreambooth_path:   "models/DreamBooth_LoRA/revAnimated_v2Rebirth.safetensors"
+  dreambooth_path:   ""
   ipa_path: ""
 
   inference_config: "configs/inference/inference.yaml"
