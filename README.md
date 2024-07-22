@@ -5,10 +5,11 @@ Painting process generating using diffusion models
 TODO:
 
 - [x] Basic Inference Code Release
-- [ ] Full Inference Code Release
+- [x] Full Inference Code Release
 - [ ] Training Code Release
 - [ ] Training Dataset Release
 - [x] Checkpoints Release
+- [ ] More Examples
 
 ProgressPainter is a plug and play module to generate Human-like painting pregresses.
 
@@ -22,12 +23,19 @@ Then we fintuned the painting moodule using very few real-world painting progres
 
 ![lora-1](https://p.ipic.vip/vpuzau.png)
 
-Furthermore, by combining image reference net, we are able to reconstruct existing paintings or fish unfinished painting progresses.
+Furthermore, by combining image reference net, we are able to reconstruct existing paintings or finish unfinished painting progresses.
 
 ## Inferencing
 
-Download the pre-trained models from [Google Drive](https://drive.google.com/file/d/1Kgr2uieeY5GJr0TtQJkHt7sQw1PMEstj/view?usp=share_link) and then unzip them into `models` folder.
+**MINIMAL 30GB GPU memory is REQUIRED for SINGLE inferencing!!!**
 
+Download the pre-trained models from [Huggingface Repo](https://huggingface.co/nicolaus-huang/ProcessPainter) and then get them into `models` folder correspondingly.
+
+```cmd
+wget https://huggingface.co/guoyww/animatediff/blob/main/v3_sd15_adapter.ckpt models/DreamBooth_LoRA/v3_sd15_adapter.ckpt
+git lfs install
+git clone https://huggingface.co/runwayml/stable-diffusion-v1-5 models/stable-diffusion-v1-5
+```
 ##### Painting Characters
 
 ```cmd
