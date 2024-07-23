@@ -48,3 +48,14 @@ python scripts/animate.py --config configs/prompts/character.yaml
 python scripts/animate.py --config configs/prompts/speedpainting.yaml 
 ```
 
+#### Acknowledgment
+
+[Stylized Neural Painting](https://jiupinjia.github.io/neuralpainter/)
+
+[Learning to Paint With Model-based Deep Reinforcement Learning](https://github.com/hzwer/ICCV2019-LearningToPaint)
+
+[Paint Transformer: Feed Forward Neural Painting with Stroke Prediction](https://github.com/Huage001/PaintTransformer)
+
+[AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning](https://github.com/guoyww/animatediff/)
+
+Training data comes from @"Doodling by the Lakeside.", thanks for his contribution.
