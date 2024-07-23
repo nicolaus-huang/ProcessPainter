@@ -48,7 +48,7 @@ python scripts/animate.py --config configs/prompts/character.yaml
 python scripts/animate.py --config configs/prompts/speedpainting.yaml 
 ```
 
-#### Acknowledgment
+## Acknowledgment
 
 [Stylized Neural Painting](https://jiupinjia.github.io/neuralpainter/)
 
