@@ -32,7 +32,7 @@ Furthermore, by combining image reference net, we are able to reconstruct existi
 Download the pre-trained models from [Huggingface Repo](https://huggingface.co/nicolaus-huang/ProcessPainter) and then get them into `models` folder accordingly. If you need to do speedpaintings, you would need to download the dreambooth model from the community [HERE](https://comfy.icu/files/revAnimated_v2Rebirth.safetensors). 
 
 ```cmd
-wget https://huggingface.co/guoyww/animatediff/blob/main/v3_sd15_adapter.ckpt models/DreamBooth_LoRA/v3_sd15_adapter.ckpt
+wget -O models/DreamBooth_LoRA/v3_sd15_adapter.ckpt https://huggingface.co/guoyww/animatediff/blob/main/v3_sd15_adapter.ckpt
 git lfs install
 git clone https://huggingface.co/runwayml/stable-diffusion-v1-5 models/stable-diffusion-v1-5
 ```
