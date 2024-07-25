@@ -19,7 +19,7 @@ We pretrained the painting module based on multiple traditional painting pregres
 
 ![t2i-1](https://p.ipic.vip/h3zns7.png)
 
-Then we fintuned the painting moodule using very few real-world painting progresses using LoRA (Low Rank Adaptation) techniques, the perfromance of generating painting progresses is amazing.
+Then we fintuned the painting moodule using very few real-world painting progresses with LoRA (Low Rank Adaptation) techniques, the perfromance of generating painting progresses is amazing.
 
 ![lora-1](https://s2.loli.net/2024/07/23/J2qGgEtz8ZPrmAN.jpg)
 
