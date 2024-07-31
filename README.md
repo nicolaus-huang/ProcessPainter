@@ -11,7 +11,7 @@ TODO:
 - [x] Checkpoints Release
 - [ ] More Examples
 
-ProgressPainter is a model based on animatediff to generate Human-like painting pregresses.
+ProgressPainter is a model based on animatediff to generate Human-like painting progresses.
 
 ![main-1](https://p.ipic.vip/sw3mk1.png)
 
