@@ -1,0 +1,98 @@
+image_finetune: false
+
+output_dir: "outputs"
+pretrained_model_path: "ELLA/stable-diffusion-v1-5"
+
+unet_additional_kwargs:
+  use_motion_module              : true
+  motion_module_resolutions      : [ 1,2,4,8 ]
+  unet_use_cross_frame_attention : false
+  unet_use_temporal_attention    : false
+  context_dim: 768
+
+  motion_module_type: Vanilla
+  motion_module_kwargs:
+    num_attention_heads                : 8
+    num_transformer_block              : 1
+    attention_block_types              : [ "Temporal_Self", "Temporal_Self" ]
+    temporal_position_encoding         : true
+    temporal_position_encoding_max_len : 24
+    temporal_attention_dim_div         : 1
+    zero_initialize                    : true
+
+noise_scheduler_kwargs:
+  num_train_timesteps: 1000
+  beta_start:          0.00085
+  beta_end:            0.012
+  beta_schedule:       "linear"
+  steps_offset:        1
+  clip_sample:         false
+
+train_data:
+  csv_path:        "data/PaintTransformer.csv"
+  video_folder:    "data/PaintTransformer"
+  image_folder: "data/PaintTransformer_frames"
+  sample_size:     512
+  sample_stride:   4
+  sample_n_frames: 8
+  video_reversed: false
+
+validation_data:
+  prompts:
+    - "a white and blue plate with beautiful texture"
+    - "a girl with a flower in her hair"
+    - "a man with a beard and a tie"
+    - "a woman holding a baby"
+    - "a sunset view of a mountain with a mountain"
+    - "a crowd of people standing around a man rising his arms"
+
+
+  images:
+    - "data/validation_frames/circle"
+    - "data/validation_frames/girl"
+    - "data/validation_frames/man"
+    - "data/validation_frames/mother"
+    - "data/validation_frames/moutain"
+    - "data/validation_frames/pray"
+  
+  num_inference_steps: 50
+  guidance_scale: 5.
+
+trainable_modules:
+  - "motion_modules."
+
+unet_checkpoint_path: ""
+mm_checkpoint_path: ""
+ipa_checkpoint_path: ""
+
+learning_rate:    2e-5
+train_batch_size: 1
+
+max_train_epoch:      -1
+max_train_steps:      100000
+checkpointing_epochs: -1
+checkpointing_steps:  5000
+
+validation_steps:       5000
+validation_steps_tuple: [1, 50, 100, 300, 500, 700, 1000, 1500, 2000, 4000, 5000, 7000, 9000, 10000, 15000, 20000, 30000, 40000, 50000]
+
+# global_seed: 42
+mixed_precision_training: true
+enable_xformers_memory_efficient_attention: false
+
+is_debug: False
+lora_rank: 4
+lora_layers: []
+
+image_prompt_scale: 1.0
+
+ddim: false
+enable_ipa: false
+
+controlnet_image_indexes: []
+# controlnet_config: ""
+# controlnet_path:   ""
+controlnet_conditioning_scale: 1
+
+adapter_lora_path: "models/DreamBooth_LoRA/v3_sd15_adapter.ckpt"
+adapter_lora_alpha: 1.0
