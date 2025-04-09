@@ -1,15 +1,19 @@
 # ProcessPainter
 
+
+<a href="https://arxiv.org/abs/2406.06062"><img src="https://img.shields.io/badge/ariXv-2406.06062-A42C25.svg" alt="arXiv"></a>
+<a href="https://huggingface.co/nicolaus-huang/ProcessPainter/tree/main"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-ffbd45.svg" alt="HuggingFace"></a>
+
+
 Painting process generating using diffusion models
 
 TODO:
 
 - [x] Basic Inference Code Release
 - [x] Full Inference Code Release
-- [ ] Training Code Release
-- [ ] Training Dataset Release
+- [x] Training Code Release
+- [x] Training Dataset Release
 - [x] Checkpoints Release
-- [ ] More Examples
 
 ProgressPainter is a model based on animatediff to generate Human-like painting progresses.
 
