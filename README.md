@@ -12,16 +12,12 @@ TODO:
 - [x] Basic Inference Code Release
 - [x] Full Inference Code Release
 - [x] Training Code Release
-- [x] Training Dataset Release
+- [ ] Training Dataset Release
 - [x] Checkpoints Release
 
 ProgressPainter is a model based on animatediff to generate Human-like painting progresses.
 
-![main-1](https://p.ipic.vip/sw3mk1.png)
-
-We pretrained the painting module based on multiple traditional painting pregress reconstruction methods.                                                                                                                                                                                                                             
-
-![t2i-1](https://p.ipic.vip/h3zns7.png)
+We pretrained the painting module based on multiple traditional painting pregress reconstruction methods.                                                        
 
 Then we fintuned the painting moodule using very few real-world painting progresses with LoRA (Low Rank Adaptation) techniques, the perfromance of generating painting progresses is amazing.
 
